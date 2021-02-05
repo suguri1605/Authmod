@@ -1,0 +1,65 @@
+</div>
+</div>
+<script>
+    function validatesign(){
+        var altext= validateName() + validateEmail() + validatePass() + checkpass(); 
+           
+            if(altext != "")
+            {
+                alert(altext);
+                return false;
+            }
+            else{
+                return true;
+            }
+
+        } 
+    function validateName(){ 
+        var name = document.getElementById("name").value;
+        if(!name){                    
+            return "Enter a Username!\n";   
+        }
+        var nameformat =/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+        if(!name.match(nameformat))
+        {
+            return "You have entered an invalid email address!\n";
+        }
+        return "";
+    }
+    function validateEmail(){
+        var email = document.getElementById("email").value;
+        if(!email){
+            return "Enter an email address!\n";   
+        }
+        var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if(!email.match(mailformat))
+        {
+            return "You have entered an invalid email address!\n";
+        }
+        return "";
+    }
+    function validatePass(){
+        var pass = document.getElementById("password1").value;
+        if(!pass){
+            return "Enter a password!\n";   
+        }
+        var passformat = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
+        if(!pass.match(passformat))
+        {
+            return "You have entered an invalid password\n";
+        }
+        return "";
+    }
+    function checkpass(){
+        var pass1 = document.getElementById("password1").value;
+        var pass2 = document.getElementById("password2").value;
+        if(pass1 != pass2){
+            return "Passwords donot match!";
+        }
+        else{
+            return "";
+        }
+    }
+</script>
+</body>
+</html>

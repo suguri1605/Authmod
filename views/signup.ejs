@@ -1,0 +1,26 @@
+<%- include('partials/part1') %>
+<form method="POST" action="/register" onsubmit="return(validatesign());">
+    <span class="login-page__title">Sign up</span>
+    <span class="login-page__subtitle">Create a New Account</span>
+    <fieldset class="login-page__input_box">
+        <legend class="login-page__label">Username</legend>
+        <input class="login-page__input" type="text" name="name" id="name">
+    </fieldset>
+    <fieldset class="login-page__input_box">
+        <legend class="login-page__label">Email Id</legend>
+        <input class="login-page__input" type="text" id="email" name="email">
+    </fieldset>
+    <fieldset class="login-page__input_box">
+        <legend class="login-page__label">Password</legend>
+        <input class="login-page__input" type="password" id="password1" name="password">
+    </fieldset>
+    <fieldset class="login-page__input_box">
+        <legend class="login-page__label">Confirm Password</legend>
+        <input class="login-page__input" type="password" id="password2">
+    </fieldset>
+    <div class="login-page__button_box">
+        <button class="login-page__button" >Sign up</button>
+    </div>
+    <a href="index.html"><span class="login-page__subtitle" > Already have an Account? </span></a>
+</form>
+<%- include('partials/part3') %>

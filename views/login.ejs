@@ -1,0 +1,20 @@
+<%- include('partials/part1') %>
+<form method="POST" action="/login" onsubmit="return(validatelogin());"">
+    <span class="login-page__title">Login</span>
+    <span class="login-page__subtitle">Login to your Account</span>
+    <fieldset class="login-page__input_box">
+        <legend class="login-page__label">Email Id / Username</legend>
+        <input class="login-page__input" type="text" id="email"> 
+    </fieldset>
+    <fieldset class="login-page__input_box">
+        <legend class="login-page__label">Password</legend>
+        <input class="login-page__input" type="password" id="password">
+    </fieldset>
+    <div class="login-page__button_box">
+        <button class="login-page__button"> Login </button>
+    </div>
+    <a href="signup.html"><span class="login-page__subtitle" > Create a New Account? </span></a>
+    
+</form>
+
+<%- include('partials/part4') %>

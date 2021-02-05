@@ -1,0 +1,45 @@
+</div>
+</div>
+<script>
+    function validatelogin(){
+        var altext= validateEmail() + validatePass(); 
+           
+            if(altext != "")
+            {
+                alert(altext);
+                return false;
+            }
+            else{
+                return true;
+            }
+
+        } 
+   
+    function validateEmail(){
+        var email = document.getElementById("email").value;
+        if(!email){
+            return "Enter an email address!\n";   
+        }
+        var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if(!email.match(mailformat))
+        {
+            return "You have entered an invalid email address!\n";
+        }
+        return "";
+    }
+    function validatePass(){
+        var pass = document.getElementById("password").value;
+        if(!pass){
+            return "Enter a password!\n";   
+        }
+        var passformat = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
+        if(!pass.match(passformat))
+        {
+            return "You have entered an invalid password\n";
+        }
+        return "";
+    }
+  
+</script>
+</body>
+</html>
